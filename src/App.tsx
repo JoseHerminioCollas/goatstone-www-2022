@@ -88,19 +88,6 @@ function App() {
       </article>
       <article>
         <h3>
-          Minhooks
-          &nbsp;
-          <a href="https://github.com/JoseHerminioCollas/min-hooks" target="new">https://github.com/JoseHerminioCollas/min-hooks</a>
-        </h3>
-        <p>
-          <img src="img/min-hooks.png" alt="" />
-            Minhooks is an attempt to represent the React hooks API in a minimal but functional way. Ideally, this will
-            provide a resource for future development.
-            I have incorporated the work I have done in the Minhooks repository into the D3Frame repository.
-        </p>
-      </article>
-      <article>
-        <h3>
           Color Globe
           &nbsp;
           <a href="http://colorglobe.goatstone.com" target="new">http://colorglobe.goatstone.com</a>

@@ -47,15 +47,14 @@ article {
   margin: 1%;
   padding: 2%;
   max-width: 400px;
+  border-radius: 1em;
 }
 header div {
   height: 150px;
 }
 header div img.logo {
-  border: 2px solid blue;
-  height: 300px;
-  clip-path: inset(20px 40px 160px 60px);
-  background: gray;
+  height: 7em;
+  margin: 1em;
 }
 img {
   margin: 1%;
