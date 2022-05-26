@@ -2,8 +2,10 @@ import React from "react";
 import { setIn } from "final-form";
 import { Form, Field } from "react-final-form";
 import * as Yup from "yup";
-import { TextField } from '@fluentui/react/lib/TextField';
-import  './contact-form.css'
+import {
+  IconButton,
+} from '@fluentui/react';
+import './contact-form.css'
 
 const schema = Yup.object({
   name: Yup.string().required("Required"),
@@ -20,8 +22,21 @@ const validate = async (values) => {
     return errors;
   }
 };
-
+const sendMailStyles = {
+  root: {
+    marginLeft: 'auto',
+    marginTop: '4px',
+    marginRight: '2px',
+  },
+  icon: {
+    fontSize: '3em',
+  },
+  rootHovered: {
+  },
+};
 function ContactForm() {
+  const sendIcon = { iconName: 'send' };
+
   return (
     <Form
       onSubmit={() => { }}
@@ -32,8 +47,10 @@ function ContactForm() {
             {({ input, meta }) => (
               <div>
                 <label>Name</label>
-                <input {...input} type="text" placeholder="name" name="name" />
-                {meta.error && meta.touched && <span>{meta.error}</span>}
+                <input {...input} type="text" name="name" />
+                <div className="error">
+                  {meta.error && meta.touched && meta.error}
+                </div>
               </div>
             )}
           </Field>
@@ -41,8 +58,10 @@ function ContactForm() {
             {({ input, meta }) => (
               <div>
                 <label>Email</label>
-                <input {...input} type="text" placeholder="email" name="email" />
-                {meta.error && meta.touched && <span>{meta.error}</span>}
+                <input {...input} type="text" name="email" />
+                <div className="error">
+                  {meta.error && meta.touched && meta.error}
+                </div>
               </div>
             )}
           </Field>
@@ -50,16 +69,24 @@ function ContactForm() {
             {({ input, meta }) => (
               <div>
                 <label>Message</label>
-                {/* <TextField {...input} name="message" label="Standard" errorMessage="" /> */}
-                <input {...input} type="text" placeholder="message" name="message" />
-                {meta.error && meta.touched && <span>{meta.error}</span>}
+                <textarea {...input} type="text" name="message" >
+                </textarea>
+                <div className="error">
+                  {meta.error && meta.touched && meta.error}
+                </div>
               </div>
             )}
           </Field>
           <button
             disabled={pristine || Object.values(errors).length > 0}
             type="submit">
-            submit
+            <IconButton
+              styles={sendMailStyles}
+              iconProps={sendIcon}
+              ariaLabel="Send Email"
+              onClick={() => console.log('submit')}
+            />
+            Submit
           </button>
         </form>
       )}

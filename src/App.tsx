@@ -12,7 +12,7 @@ import {
 import ContactForm from './contact-form';
 import logo from './logo.svg';
 
-const iconClass = mergeStyles({
+const mailIconClass = mergeStyles({
   fontSize: 50,
   height: 50,
   width: 50,
@@ -35,6 +35,18 @@ const iconButtonStyles: Partial<IButtonStyles> = {
   rootHovered: {
   },
 };
+const sendMailStyles: Partial<IButtonStyles> = {
+  root: {
+    marginLeft: 'auto',
+    marginTop: '4px',
+    marginRight: '2px',
+  },
+  icon: {
+    fontSize: '3em',
+  },
+  rootHovered: {
+  },
+};
 initializeIcons();
 function App() {
   const [b, setB] = useState(false)
@@ -43,7 +55,10 @@ function App() {
 
   return (
     <>
-      <ContactForm />
+      <div className='form-container'>
+        <h3>Contact Goatstone</h3>
+        <ContactForm />
+      </div>
       <Modal
         titleAriaId={'titleId'}
         isOpen={b}
@@ -64,7 +79,7 @@ function App() {
           Goatstone <i>Web Development</i>
         </h1>
         <div>
-          <FontIcon onClick={() => setB(true)} aria-label="mail" iconName="mail" className={iconClass} />
+          <FontIcon onClick={() => setB(true)} aria-label="mail" iconName="mail" className={mailIconClass} />
           <img src={logo} className="logo" alt="logo" />
         </div>
       </header>
