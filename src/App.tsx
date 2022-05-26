@@ -1,43 +1,73 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FontIcon } from '@fluentui/react/lib/Icon';
+import { mergeStyles } from '@fluentui/react/lib/Styling';
+import { initializeIcons } from '@fluentui/font-icons-mdl2';
+import {
+  mergeStyleSets,
+  Modal,
+  IIconProps,
+  IconButton,
+  IButtonStyles,
+} from '@fluentui/react';
+import ContactForm from './contact-form';
 import logo from './logo.svg';
 
+const iconClass = mergeStyles({
+  fontSize: 50,
+  height: 50,
+  width: 50,
+  margin: '0.2em',
+  cursor: 'pointer',
+});
+const contentStyles = mergeStyleSets({
+  container: {
+    display: 'flex',
+    flexFlow: 'column nowrap',
+    alignItems: 'stretch',
+  },
+});
+const iconButtonStyles: Partial<IButtonStyles> = {
+  root: {
+    marginLeft: 'auto',
+    marginTop: '4px',
+    marginRight: '2px',
+  },
+  rootHovered: {
+  },
+};
+initializeIcons();
 function App() {
+  const [b, setB] = useState(false)
+  const cancelIcon: IIconProps = { iconName: 'Cancel' };
+  const sendIcon: IIconProps = { iconName: 'send' };
+
   return (
     <>
+      <ContactForm />
+      <Modal
+        titleAriaId={'titleId'}
+        isOpen={b}
+        onDismiss={() => setB(false)}
+        isBlocking={false}
+        containerClassName={contentStyles.container}
+      >
+        <IconButton
+          styles={iconButtonStyles}
+          iconProps={cancelIcon}
+          ariaLabel="Close popup modal"
+          onClick={() => setB(false)}
+        />
+        <h3>Send Mail to Goatstone</h3>
+      </Modal>
       <header>
         <h1>
           Goatstone <i>Web Development</i>
         </h1>
-        <div >
+        <div>
+          <FontIcon onClick={() => setB(true)} aria-label="mail" iconName="mail" className={iconClass} />
           <img src={logo} className="logo" alt="logo" />
         </div>
       </header>
-      <article>
-        <h3>Contact</h3>
-        <p>
-          <form action="http://localhost:3001/mail" method="post">
-            <input type="hidden" name="redirect_to" value="http://www.yourdomain.com/destination-page/" />
-            <input type="text" name="name" />
-            <input type="text" name="email" placeholder="Email Address" />
-            <input type="text" name="message" placeholder="message" />
-            <input type="submit" value="Submit" />
-          </form>
-          info.5.2022@goatstone.com
-        </p>
-        <h5>
-          Github
-        </h5>
-        <ul>
-          <li>
-            <a href="https://github.com/joseherminiocollas" target="new">
-              github.com/joseherminiocollas
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/goatstone" target="new">github.com/goatstone</a>
-          </li>
-        </ul>
-      </article>
       <article>
         <h3>Web Development</h3>
         <p>
@@ -53,10 +83,19 @@ function App() {
           &nbsp;
           lately.
         </p>
-        <p>
-          I have also been working with generating styles with JavaScript, D3 Interpolators, and JSS. I hope to work
-          more with this strategy and see what more could be done with it.
-        </p>
+        <h5>
+          Github
+        </h5>
+        <ul>
+          <li>
+            <a href="https://github.com/joseherminiocollas" target="new">
+              github.com/joseherminiocollas
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/goatstone" target="new">github.com/goatstone</a>
+          </li>
+        </ul>
       </article>
       <article>
         <h3>

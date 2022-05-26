@@ -31,7 +31,7 @@ h5 {
 header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
   background: #333;
   width: 100%;
 }
@@ -50,11 +50,15 @@ article {
   border-radius: 1em;
 }
 header div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 150px;
+
 }
 header div img.logo {
   height: 7em;
-  margin: 1em;
+  /* margin: 1em; */
 }
 img {
   margin: 1%;

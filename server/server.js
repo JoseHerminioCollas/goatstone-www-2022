@@ -17,7 +17,7 @@ const sendMail = (body) => {
       from: 'jc@goatstone.com', // Sender address
       to: 'jc@goatstone.com', // List of recipients
       subject: 'Goatstone site mail', // Subject line
-      text: body.email + ' : ' + body.message, // Plain text body
+      text: `${body.email} : ${body.name} :  ${body.message}`, // Plain text body
    };
    transport.sendMail(mailOptions, function (err, info) {
       if (err) {
