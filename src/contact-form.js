@@ -48,7 +48,7 @@ function ContactForm() {
       onSubmit={() => { }}
       validate={validate}
       render={({ handleSubmit, form, submitting, pristine, values, errors, ...rest }) => (
-        <form action='http://localhost:3001/mail' method='POST'  >
+        <form action='https://goatstone.com/mail' method='POST'  >
           <Field name="name">
             {({ input, meta }) => (
               <div>

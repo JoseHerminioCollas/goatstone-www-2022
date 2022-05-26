@@ -24,6 +24,7 @@ const contentStyles = mergeStyleSets({
     display: 'flex',
     flexFlow: 'column nowrap',
     alignItems: 'stretch',
+    background: 'none'
   },
 });
 const iconButtonStyles: Partial<IButtonStyles> = {
@@ -55,10 +56,6 @@ function App() {
 
   return (
     <>
-      <div className='form-container'>
-        <h3>Contact Goatstone</h3>
-        <ContactForm />
-      </div>
       <Modal
         titleAriaId={'titleId'}
         isOpen={b}
@@ -66,13 +63,18 @@ function App() {
         isBlocking={false}
         containerClassName={contentStyles.container}
       >
-        <IconButton
-          styles={iconButtonStyles}
-          iconProps={cancelIcon}
-          ariaLabel="Close popup modal"
-          onClick={() => setB(false)}
-        />
-        <h3>Send Mail to Goatstone</h3>
+        <div className='form-container'>
+          <div className='modal-head'>
+            <h3>Contact Goatstone</h3>
+            <IconButton
+              styles={iconButtonStyles}
+              iconProps={cancelIcon}
+              ariaLabel="Close popup modal"
+              onClick={() => setB(false)}
+            />
+          </div>
+          <ContactForm />
+        </div>
       </Modal>
       <header>
         <h1>

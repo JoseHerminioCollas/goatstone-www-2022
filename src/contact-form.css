@@ -3,8 +3,20 @@
     margin: auto;
     max-width: 190em;
     background-color: #ccc;
-    padding: 1.5em;
+    padding: 1.0em 2em;
     border-radius: 0.5em;
+    text-align: right;
+}
+.form-container h3 {
+    display: inline;
+    text-align: right;
+}
+.modal-head {
+    /* background-color: #ddd; */
+    display: flex;
+    align-items: center;
+    border-radius: 0.5em;
+
 }
 form {
     width: 100%;
@@ -28,6 +40,10 @@ form div{
 form div label {
     color: #333;
     margin: 0 0.25em;
+}
+form div label::before {
+    content: '* ';
+    color: red;
 }
 div .error {
     display: flex;
