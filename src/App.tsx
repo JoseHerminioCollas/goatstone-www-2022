@@ -15,16 +15,23 @@ function App() {
       <article>
         <h3>Contact</h3>
         <p>
+          <form action="http://localhost:3001/mail" method="post">
+            <input type="hidden" name="redirect_to" value="http://www.yourdomain.com/destination-page/" />
+            <input type="text" name="name" />
+            <input type="text" name="email" placeholder="Email Address" />
+            <input type="text" name="message" placeholder="message" />
+            <input type="submit" value="Submit" />
+          </form>
           info.5.2022@goatstone.com
-          </p>
-         <h5>
+        </p>
+        <h5>
           Github
-          </h5>
+        </h5>
         <ul>
           <li>
             <a href="https://github.com/joseherminiocollas" target="new">
               github.com/joseherminiocollas
-              </a>
+            </a>
           </li>
           <li>
             <a href="https://github.com/goatstone" target="new">github.com/goatstone</a>
@@ -37,14 +44,14 @@ function App() {
           Goatstone is primarily but not exclusively, Jose Collas. Here you will find a collection of some of our
           work. Goatstone is involved in web development, primarily using the technologies: JavaScipt, CSS, and HTML.
           I have been working with
-            &nbsp;
-            <a href="https://reactjs.org/" target="new">React </a>
-            &nbsp;
-            and
-            &nbsp;
-            <a href="https://d3js.org/" target="new">D3</a>
-            &nbsp;
-            lately.
+          &nbsp;
+          <a href="https://reactjs.org/" target="new">React </a>
+          &nbsp;
+          and
+          &nbsp;
+          <a href="https://d3js.org/" target="new">D3</a>
+          &nbsp;
+          lately.
         </p>
         <p>
           I have also been working with generating styles with JavaScript, D3 Interpolators, and JSS. I hope to work
@@ -65,11 +72,11 @@ function App() {
           </a>,
           &nbsp;
           <a href="https://leafletjs.com/">
-          Leaflet
+            Leaflet
           </a> and
           &nbsp;
           <a href="https://www.bingmapsportal.com/">
-          Bing
+            Bing
           </a>
           .
         </p>
@@ -82,8 +89,8 @@ function App() {
         <p>
           <img src="img/d3-frame-1.png" className="right" width="250" height="160" alt="" />
           <img src="img/d3-frame-3.png" className="right" width="250" height="160" alt="" /> D3 and React
-            Methodologies for using the D3 visualization library with React. I have been working with React
-            ( reactjs.org ) and D3 ( d3js.org ) together, and I am documenting methodologies in a GitHub repository,
+          Methodologies for using the D3 visualization library with React. I have been working with React
+          ( reactjs.org ) and D3 ( d3js.org ) together, and I am documenting methodologies in a GitHub repository,
         </p>
       </article>
       <article>
@@ -94,8 +101,8 @@ function App() {
         </h3>
         <p>
           <img src="img/globe.png" alt="" />
-                Here the theming strategy using JSS and D3 interpolators are creating various themes for a map generated
-                with the D3 Geo library.
+          Here the theming strategy using JSS and D3 interpolators are creating various themes for a map generated
+          with the D3 Geo library.
         </p>
       </article>
       <article>
@@ -106,14 +113,14 @@ function App() {
         </h3>
         <p>
           <img src="img/ameb.png" alt="" />
-              Ameb was an entry into the JS13kGames JavaScript competition. Ameb must eat food in order to accumulate
-              health points and stay alive.
-              The player of Ameb navigates the character, Ameb, to catch food.
+          Ameb was an entry into the JS13kGames JavaScript competition. Ameb must eat food in order to accumulate
+          health points and stay alive.
+          The player of Ameb navigates the character, Ameb, to catch food.
         </p>
       </article>
       <footer>
         Goatstone &copy; 2022
-    </footer>
+      </footer>
     </>
   );
 }
