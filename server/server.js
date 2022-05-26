@@ -1,17 +1,16 @@
-// require('dotenv').config();
+require('dotenv').config();
 const path = require('path');
 const express = require('express')
 const nodemailer = require('nodemailer');
 
 const app = express();
-
 const sendMail = (body) => {
    var transport = nodemailer.createTransport({
       host: "smtp.mailtrap.io",
       port: 2525,
       auth: {
-         user: "23d8d5a174efe6",
-         pass: "40cb7614f28613"
+         user: process.env.MAIL_USER,
+         pass: process.env.PASSWORD
       }
    });
    const mailOptions = {
@@ -20,7 +19,6 @@ const sendMail = (body) => {
       subject: 'Goatstone site mail', // Subject line
       text: body.email + ' : ' + body.message, // Plain text body
    };
-
    transport.sendMail(mailOptions, function (err, info) {
       if (err) {
          console.log(err)
@@ -31,7 +29,6 @@ const sendMail = (body) => {
 }
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
 app.route("/mail").get(function (req, res) {
    var options = {
       root: path.join(__dirname)
@@ -46,5 +43,4 @@ app.post('/mail', (req, res) => {
    };
    res.sendFile('mail.html', options)
 })
-
 app.listen(3001, () => { console.log(`Listening on port 3001`); });
