@@ -25,13 +25,19 @@ const validate = async (values) => {
 const sendMailStyles = {
   root: {
     marginLeft: 'auto',
-    marginTop: '4px',
-    marginRight: '2px',
+    marginTop: '1em',
+    marginRight: '3em',
+    background: 'none',
+    color: 'green'
   },
   icon: {
     fontSize: '3em',
+    background: 'none'
+
   },
   rootHovered: {
+    background: 'none',
+    color: 'red'
   },
 };
 function ContactForm() {
@@ -77,17 +83,15 @@ function ContactForm() {
               </div>
             )}
           </Field>
-          <button
+          <IconButton
+            name="Submit"
             disabled={pristine || Object.values(errors).length > 0}
-            type="submit">
-            <IconButton
-              styles={sendMailStyles}
-              iconProps={sendIcon}
-              ariaLabel="Send Email"
-              onClick={() => console.log('submit')}
-            />
-            Submit
-          </button>
+            styles={sendMailStyles}
+            iconProps={sendIcon}
+            ariaLabel="Send Email"
+            onClick={() => console.log('submit')}
+            type="submit"
+          />
         </form>
       )}
     />
