@@ -86,23 +86,14 @@ function App() {
         </div>
       </header>
       <article>
-        <h3>Web Development</h3>
+        <h3>Goatstone, Web Development</h3>
         <p>
-          Goatstone is primarily but not exclusively, Jose Collas. Here you will find a collection of some of our
-          work. Goatstone is involved in web development, primarily using the technologies: JavaScipt, CSS, and HTML.
-          I have been working with
-          &nbsp;
-          <a href="https://reactjs.org/" target="new">React </a>
-          &nbsp;
-          and
-          &nbsp;
-          <a href="https://d3js.org/" target="new">D3</a>
-          &nbsp;
-          lately.
+          Goatstone is, Jose Collas. Here you will find a collection of some of my work.
+          I have been primarily using the technologies: JavaScipt, CSS, and HTML to implement the listed work.
         </p>
-        <h5>
+        <h4>
           Github
-        </h5>
+        </h4>
         <ul>
           <li>
             <a href="https://github.com/joseherminiocollas" target="new">
@@ -113,6 +104,32 @@ function App() {
             <a href="https://github.com/goatstone" target="new">github.com/goatstone</a>
           </li>
         </ul>
+      </article>
+      <article>
+        <h3>
+          View GIBS&nbsp;
+          <a href="https://viewgibs.world/" target="new">https://viewgibs.world/</a>
+        </h3>
+        <p>
+          View GIBS is a tool for viewing satellite images provided by NASA's Global Imagery Browse Services (GIBS) system.
+          GIBS : <a href="https://nasa-gibs.github.io/gibs-api-docs">
+            https://nasa-gibs.github.io/gibs-api-docs
+          </a>
+        </p>
+        <img src="img/view-gibs-app-sml.png" />
+      </article>
+      <article>
+        <h3>
+          Ameb, a game
+          &nbsp;
+          <a href="http://ameb.goatstone.com/" target="new">http://ameb.goatstone.com/</a>
+        </h3>
+        <p>
+          <img src="img/ameb.png" alt="" />
+          Ameb was an entry into the JS13kGames JavaScript competition. Ameb must eat food in order to accumulate
+          health points and stay alive.
+          The player of Ameb navigates the character, Ameb, to catch food.
+        </p>
       </article>
       <article>
         <h3>
@@ -136,6 +153,7 @@ function App() {
           </a>
           .
         </p>
+        <img src="img/map-lab.png" />
       </article>
       <article>
         <h3>
@@ -146,32 +164,8 @@ function App() {
           <img src="img/d3-frame-1.png" className="right" width="250" height="160" alt="" />
           <img src="img/d3-frame-3.png" className="right" width="250" height="160" alt="" /> D3 and React
           Methodologies for using the D3 visualization library with React. I have been working with React
-          ( reactjs.org ) and D3 ( d3js.org ) together, and I am documenting methodologies in a GitHub repository,
-        </p>
-      </article>
-      <article>
-        <h3>
-          Color Globe
-          &nbsp;
-          <a href="http://colorglobe.goatstone.com" target="new">http://colorglobe.goatstone.com</a>
-        </h3>
-        <p>
-          <img src="img/globe.png" alt="" />
-          Here the theming strategy using JSS and D3 interpolators are creating various themes for a map generated
-          with the D3 Geo library.
-        </p>
-      </article>
-      <article>
-        <h3>
-          Ameb, a game
-          &nbsp;
-          <a href="http://ameb.goatstone.com/" target="new">http://ameb.goatstone.com/</a>
-        </h3>
-        <p>
-          <img src="img/ameb.png" alt="" />
-          Ameb was an entry into the JS13kGames JavaScript competition. Ameb must eat food in order to accumulate
-          health points and stay alive.
-          The player of Ameb navigates the character, Ameb, to catch food.
+          ( reactjs.org ) and D3 ( d3js.org ) together, and I am documenting methodologies in a GitHub repository.
+          <a href="https://github.com/goatstone/d3-frame" target="new">https://github.com/goatstone/d3-frame</a>
         </p>
       </article>
       <footer>
