@@ -106,6 +106,22 @@ function App() {
         </ul>
       </article>
       <article>
+        <h3>DataLook</h3>
+        <a href="https://goatstone.com/dl/" target="new">
+          https://goatstone.com/dl/
+        </a>
+        <p>
+          The display of data in a reactive layout.
+          The application uses TypeScript and RxJS patterns for combining data with style definitions.
+          The code can be found in the Github repository.
+        </p>
+        Git Hub :
+        <a href="https://github.com/JoseHerminioCollas/data-view" target="new">
+          https://github.com/JoseHerminioCollas/data-view
+        </a>
+        <img src="img/data-look-screen.png" width="400" />
+      </article>
+      <article>
         <h3>
           View GIBS&nbsp;
           <a href="https://viewgibs.world/" target="new">https://viewgibs.world/</a>

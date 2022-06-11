@@ -7,6 +7,10 @@ server {
       location / {
               try_files $uri $uri/ =404;
       }
+      location /data-look {
+              root /home/goat/data-look;
+              index index.html;
+      }
       location /mail {
         proxy_pass http://localhost:3001;
         proxy_http_version 1.1;
