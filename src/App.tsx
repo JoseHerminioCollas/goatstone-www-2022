@@ -117,8 +117,8 @@ function App() {
         <p>
         </p>
         Git Hub :
-        <a href="" target="new">
-          https://github.com/JoseHerminioCollas/react-matters
+        <a href="https://github.com/JoseHerminioCollas/react-matter" target="new">
+          https://github.com/JoseHerminioCollas/react-matter
         </a>
         <img src="img/2d-data-screen-shot.png" width="400" />
       </article>
